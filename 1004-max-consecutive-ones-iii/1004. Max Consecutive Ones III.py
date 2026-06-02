@@ -2,7 +2,7 @@ class Solution:
     def longestOnes(self, nums: List[int], k: int) -> int:
         start = end = flips = ans = 0
 
-        while end < len(nums):
+        for end in range(len(nums)):
             if nums[end] == 0:
                 flips += 1
                             
