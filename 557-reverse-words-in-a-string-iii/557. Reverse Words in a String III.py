@@ -5,5 +5,6 @@ class Solution:
 
         for word in words:
             reversed_str += word[::-1] + ' '
+            print(word)
 
         return reversed_str.strip()
