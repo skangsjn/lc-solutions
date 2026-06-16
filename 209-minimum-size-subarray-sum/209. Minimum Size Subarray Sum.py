@@ -11,10 +11,6 @@ class Solution:
                 ans = min(ans, r - l + 1)
                 total -= nums[l]
                 l += 1
-
-        if ans == float('inf'):
-            return 0
             
-        return ans
-                
+        return ans if ans != float("inf") else 0                
             
