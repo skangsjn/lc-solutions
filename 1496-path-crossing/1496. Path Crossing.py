@@ -2,20 +2,24 @@ from collections import defaultdict
 
 class Solution:
     def isPathCrossing(self, path: str) -> bool:
-        coords = defaultdict(int)
-        coords[(0, 0)] = 1   
+        moves = {
+            'N': (0, 1),
+            'S': (0, -1),
+            'W': (-1, 0),
+            'E': (1, 0),
+        }
+
+        visited = {(0, 0)}   
         x = y = 0     
 
         for c in path:
-            if c == 'N':
-                y += 1
-            if c == 'S':
-                y -= 1
-            if c == 'E':
-                x += 1
-            if c == 'W':
-                x -= 1
+            dx, dy = moves[c]
+            x += dx
+            y += dy
+
+            if (x, y) in visited:
+                return True
             
-            coords[(x, y)] += 1
+            visited.add((x, y))
         
-        return len(set(coords.values())) > 1
+        return False
