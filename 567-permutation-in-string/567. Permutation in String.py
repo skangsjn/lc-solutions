@@ -15,13 +15,17 @@ class Solution:
         if chars1 == chars2:
             return True
         
-        l = 1
+        l = 0
         for r in range(n, len(s2)):
-            chars2 = Counter(s2[l:r+1])
-            print(chars2)
+            chars2[s2[r]] += 1
+            chars2[s2[l]] -= 1
+            if chars2[s2[l]] == 0:
+                del chars2[s2[l]]
+            l += 1
+
+            # chars2 = Counter(s2[l:r+1])
             if chars1 == chars2:
                 return True
-            l += 1
 
         
         
