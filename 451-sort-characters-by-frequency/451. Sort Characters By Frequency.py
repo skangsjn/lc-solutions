@@ -9,6 +9,7 @@ class Solution:
         sorted_counts = sorted(counts.items(), key=lambda item: item[1], reverse=True)
 
         for k, v in sorted_counts:
-            ans += (k*v)
+            for i in range(v):
+                ans += k
 
         return ans
