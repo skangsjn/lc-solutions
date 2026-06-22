@@ -4,7 +4,7 @@ class Solution:
         counts = Counter(nums)
         ans = 0
 
-        for k, v in counts.items():     
+        for v in counts.values():     
             if v > 1:
                 ans += (v*(v-1) // 2)
         
