@@ -39,9 +39,3 @@ class Solution:
                 return True
 
         return False
-            
-        # s1 = "abb", s2 = "eidbbbcccbbaooo"
-        
-        # need = 2 unique characters
-
-        # {"a" : 1, "b" : 1 }
