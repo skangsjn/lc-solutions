@@ -10,9 +10,8 @@ class Solution:
             if (s_char not in mpp_s) and (t_char not in mpp_t):
                 mpp_s[s_char] = t_char
                 mpp_t[t_char] = s_char
-            elif (s_char not in mpp_s) and (t_char in mpp_t):
-                return False
-            elif (s_char in mpp_s) and mpp_s[s_char] != t_char:
+            
+            elif ((s_char in mpp_s) and (mpp_s[s_char] != t_char)) or ((t_char in mpp_t) and (mpp_t[t_char] != s_char)):
                 return False
         return True
             
