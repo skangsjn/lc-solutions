@@ -3,6 +3,8 @@ class Solution:
         ans = total_score = l = 0
         elements = set()
 
+        # for i, j in zip()
+
         for r in range(len(nums)):
             while nums[r] in elements:
                 elements.remove(nums[l])
