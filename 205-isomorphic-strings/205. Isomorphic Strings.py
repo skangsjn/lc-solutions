@@ -11,7 +11,7 @@ class Solution:
                 mpp_s[s_char] = t_char
                 mpp_t[t_char] = s_char
             
-            elif ((s_char in mpp_s) and (mpp_s[s_char] != t_char)) or ((t_char in mpp_t) and (mpp_t[t_char] != s_char)):
+            elif (mpp_s.get(s_char) != t_char) or (mpp_t.get(t_char) != s_char):
                 return False
         return True
             
