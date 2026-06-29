@@ -22,17 +22,15 @@ class Solution:
             slow.next = prev
             prev = slow
             slow = next_node
-
         con.next = prev
 
         # initialize second pointer n/2 ahead of first
-        p1 = p2 = head
-        for _ in range(count):
-            p2 = p2.next
+        p1, p2 = head, prev
+        # for _ in range(count):
+        #     p2 = p2.next
         
         # find max sum
         for _ in range(count):
-            print(p1.val)
             curr = p1.val + p2.val
             ans = max(ans, curr)
             p1, p2 = p1.next, p2.next
