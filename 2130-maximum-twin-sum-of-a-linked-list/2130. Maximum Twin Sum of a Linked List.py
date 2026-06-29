@@ -24,11 +24,6 @@ class Solution:
             slow = next_node
 
         con.next = prev
-    
-        # if con:
-        #     con.next = prev
-        # else:
-        #     head = prev
 
         # initialize second pointer n/2 ahead of first
         p1 = p2 = head
