@@ -24,7 +24,6 @@ class Solution:
 
             curr = next_odd
         
-        # print(curr)
         if curr:
             last_odd = prev_even.next
             prev_odd.next = last_odd
@@ -32,11 +31,5 @@ class Solution:
             last_odd.next = con
         else:
             prev_odd.next = con
-            print(prev_odd)
-            # print(prev_even)
-            print(con)
-            # print(head)
         
         return head
-        # print(con)
-        # print(curr)
