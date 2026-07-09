@@ -4,10 +4,12 @@ class Solution:
         path_arr = path.split('/')
 
         for folder in path_arr:
-            if stack and folder == '..':
-                stack.pop()
-            
-            if folder not in ('.', '..', ''):
+            if folder == '..':
+                if stack:
+                    stack.pop()
+            elif folder == '.' or not folder:
+                continue
+            else:
                 stack.append(folder)
         
         return '/' + '/'.join(stack)
