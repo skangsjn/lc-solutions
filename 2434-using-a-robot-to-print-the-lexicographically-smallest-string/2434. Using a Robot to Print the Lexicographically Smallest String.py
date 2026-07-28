@@ -19,8 +19,8 @@ class Solution:
             while t and (ord(t[-1]) - ord('a')) <= find_smallest():
                 p.append(t.pop())
 
-        while t:
-            p.append(t.pop())
+        # while t:
+        #     p.append(t.pop())
         
         return ''.join(p)
         
